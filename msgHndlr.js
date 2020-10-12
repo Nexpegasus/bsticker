@@ -219,6 +219,16 @@ module.exports = msgHandler = async (client, message) => {
                 client.reply(from, `➸ *Query* : ${query_}\n\n➸ *Result* : ${wiki.result}`, id)
             }
             break
+        case '!spamsms':
+            if (args.length === 1) return client.reply(from, 'Kirim perintah *!spamsms [nomor] [jumlah]*\nContoh : *!spamsms 83888888 10', id)
+            const no = body.slice(7)
+            const jum = await get.get('https://mhankbarbar.herokuapp.com/api/spamsms?no&jum=' no jum).json()
+            if (jum.error) {
+                client.reply(from, jum.error, id)
+           } else {
+                client.reply(from, `Berhasil : ${jum.logs}\nStatus : ${jum.status} `, id)
+            }
+            break
         case '!cuaca':
             if (args.length === 1) return client.reply(from, 'Kirim perintah *!cuaca [tempat]*\nContoh : *!cuaca jakarta', id)
             const tempat = body.slice(7)
