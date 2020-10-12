@@ -112,7 +112,7 @@ module.exports = msgHandler = async (client, message) => {
             break
         case '!donasi':
         case '!donate':
-            client.sendLinkWithAutoPreview(from, 'https://saweria.co/donate/mhankbarbar', donate)
+            client.sendLinkWithAutoPreview(from, 'https://saweria.co/donate/fandystore', donate)
             break
         case '!tts':
             if (args.length === 1) return client.reply(from, 'Kirim perintah *!tts [id, en, jp, ar] [teks]*, contoh *!tts id halo semua*')
@@ -210,7 +210,7 @@ module.exports = msgHandler = async (client, message) => {
             }
             break
         case '!wiki':
-            if (args.length === 1) return client.reply(from, 'Kirim perintah *!wiki [query]*\nContoh : *!wiki asu*', id)
+            if (args.length === 1) return client.reply(from, 'Kirim perintah *!wiki [query]*\nContoh : *!wiki covid19*', id)
             const query_ = body.slice(6)
             const wiki = await get.get('https://mhankbarbar.herokuapp.com/api/wiki?q='+ query_).json()
             if (wiki.error) {
@@ -220,7 +220,7 @@ module.exports = msgHandler = async (client, message) => {
             }
             break
         case '!cuaca':
-            if (args.length === 1) return client.reply(from, 'Kirim perintah *!cuaca [tempat]*\nContoh : *!cuaca tangerang', id)
+            if (args.length === 1) return client.reply(from, 'Kirim perintah *!cuaca [tempat]*\nContoh : *!cuaca jakarta', id)
             const tempat = body.slice(7)
             const weather = await get.get('https://mhankbarbar.herokuapp.com/api/cuaca?q='+ tempat).json()
             if (weather.error) {
@@ -448,7 +448,7 @@ module.exports = msgHandler = async (client, message) => {
             const chatz = await client.getAllChatIds()
             for (let ids of chatz) {
                 var cvk = await client.getChatById(ids)
-                if (!cvk.isReadOnly) await client.sendText(ids, `[ Shinomiya Kaguya BOT Broadcast ]\n\n${msg}`)
+                if (!cvk.isReadOnly) await client.sendText(ids, `[ Fandy BOT Broadcast ]\n\n${msg}`)
             }
             client.reply(from, 'Broadcast Success!', id)
             break
@@ -475,8 +475,8 @@ module.exports = msgHandler = async (client, message) => {
                 hehe += '╠➥'
                 hehe += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
             }
-            hehe += '╚═〘 Shinomiya Kaguya BOT 〙'
-            await sleep(2000)
+            hehe += '╚═〘 Fandy BOT 〙'
+            await sleep(60)
             await client.sendTextWithMentions(from, hehe)
             break
         case '!kickall':
@@ -576,7 +576,7 @@ module.exports = msgHandler = async (client, message) => {
                 client.reply(from, 'Link group tidak valid!', id)
             }
             break
-        case '!delete':
+        case '!del':
             if (!isGroupMsg) return client.reply(from, 'Fitur ini hanya bisa di gunakan dalam group', id)
             if (!isGroupAdmins) return client.reply(from, 'Fitur ini hanya bisa di gunakan oleh admin group', id)
             if (!quotedMsg) return client.reply(from, 'Salah!!, kirim perintah *!delete [tagpesanbot]*', id)
@@ -762,7 +762,7 @@ module.exports = msgHandler = async (client, message) => {
             client.reply(from, readme, id)
             break
         case '!info':
-            client.sendLinkWithAutoPreview(from, 'https://github.com/mhankbarbar/whatsapp-bot', info)
+            client.sendLinkWithAutoPreview(from, 'https://github.com/Nexpegasus/bsticker', info)
             break
         case '!snk':
             client.reply(from, snk, id)
