@@ -8,10 +8,10 @@
 <a href="https://github.com/Nexpegasus"><img title="Author" src="https://img.shields.io/badge/Author-Fandy-red.svg?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
-<a href="https://github.com/Nexpegasus/followers"><img title="Followers" src="https://img.shields.io/github/followers/mhankbarbar?color=blue&style=flat-square"></a>
-<a href="https://github.com/Nexpegasus/whatsapp-bot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/mhankbarbar/whatsapp-bot?color=red&style=flat-square"></a>
-<a href="https://github.com/Nexpegasus/whatsapp-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/mhankbarbar/whatsapp-bot?color=red&style=flat-square"></a>
-<a href="https://github.com/mhankbarbar/whatsapp-bot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/mhankbarbar/whatsapp-bot?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/Nexpegasus/followers"><img title="Followers" src="https://img.shields.io/github/followers/Nexpegasus?color=blue&style=flat-square"></a>
+<a href="https://github.com/Nexpegasus/whatsapp-bot/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Nexpegasus/whatsapp-bot?color=red&style=flat-square"></a>
+<a href="https://github.com/Nexpegasus/whatsapp-bot/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Nexpegasus/whatsapp-bot?color=red&style=flat-square"></a>
+<a href="https://github.com/mhankbarbar/whatsapp-bot/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Nexpegasus/whatsapp-bot?label=Watchers&color=blue&style=flat-square"></a>
 </p>
 
 ## Clone this project
