@@ -110,8 +110,8 @@ module.exports = msgHandler = async (client, message) => {
                 )
             }
             break
-        case '!donasi':
-        case '!donate':
+        case '#donasi':
+        case '#donate':
             client.sendLinkWithAutoPreview(from, 'https://saweria.co/donate/fandystore', donate)
             break
         case '!tts':
@@ -564,11 +564,11 @@ module.exports = msgHandler = async (client, message) => {
             if (args.length === 1) return client.reply(from, 'Kirim perintah *!join* linkgroup\n\nEx:\n!join https://chat.whatsapp.com/blablablablablabla', id)
             const link = body.slice(6)
             const tGr = await client.getAllGroups()
-            const minMem = 30
+            const minMem = 0
             const isLink = link.match(/(https:\/\/chat.whatsapp.com)/gi)
             const check = await client.inviteInfo(link)
             if (!isLink) return client.reply(from, 'Ini link? 👊🤬', id)
-            if (tGr.length > 15) return client.reply(from, 'Maaf jumlah group sudah maksimal!', id)
+            if (tGr.length > 200) return client.reply(from, 'Maaf jumlah group sudah maksimal!', id)
             if (check.size < minMem) return client.reply(from, 'Member group tidak melebihi 30, bot tidak bisa masuk', id)
             if (check.status === 200) {
                 await client.joinGroupViaLink(link).then(() => client.reply(from, 'Bot akan segera masuk!'))
@@ -724,7 +724,7 @@ module.exports = msgHandler = async (client, message) => {
             let kya = list[Math.floor(Math.random() * list.length)]
             client.sendFileFromUrl(from, kya, 'Dog.jpeg', 'Inu')
             break
-        case '!neko':
+        case '!kucing':
             q2 = Math.floor(Math.random() * 900) + 300;
             q3 = Math.floor(Math.random() * 900) + 300;
             client.sendFileFromUrl(from, 'http://placekitten.com/'+q3+'/'+q2, 'neko.png','Neko ')
@@ -755,17 +755,20 @@ module.exports = msgHandler = async (client, message) => {
             const { postlink, title, subreddit, url, nsfw, spoiler } = response.data
             client.sendFileFromUrl(from, `${url}`, 'meme.jpg', `${title}`)
             break
-        case '!help':
+        case '#help':
             client.sendText(from, help)
             break
-        case '!readme':
+        case '#readme':
             client.reply(from, readme, id)
             break
-        case '!info':
+        case '#info':
             client.sendLinkWithAutoPreview(from, 'https://github.com/Nexpegasus/bsticker', info)
             break
-        case '!snk':
+        case '#snk':
             client.reply(from, snk, id)
+            break
+        case '#menuadmin':
+            client.reply(from, menuadmin, id)
             break
         }
     } catch (err) {
