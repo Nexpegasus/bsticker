@@ -768,7 +768,7 @@ module.exports = msgHandler = async (client, message) => {
             client.reply(from, snk, id)
             break
         case '#menuadmin':
-            client.reply(from, menuadmin, id)
+            client.reply(from, menuadmin)
             break
         }
     } catch (err) {
